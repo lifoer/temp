@@ -1,0 +1,39 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="birthday-cake">
+    <div class="cake">
+        <div class="middle"></div>
+        <div class="chocs"></div>
+        <div class="top"></div>
+    </div>
+    <div class="velas">
+        <div class="candlewick"></div>
+        <div class="fuego"></div>
+        <div class="fuego"></div>
+        <div class="fuego"></div>
+        <div class="fuego"></div>
+        <div class="fuego"></div>
+    </div>
+</div>
+<p class="text" id="cancle">关灯许愿</p>
+<audio src="http://dl.stream.qqmusic.qq.com/C400002cTFpM292Ay2.m4a?guid=5995542566&vkey=29C6FC4E70119852316D9C3F30556C38B4553D8DE065C045FE46B6CFE3E53605FD3D6F75B322F205AD4BEEAA5C090BB9AF3D18CF5300DB92&uin=&fromtag=120032"
+       loop="loop" autoplay="autoplay" preload="auto" style="display: none;"></audio>
+<script>
+    let body = document.body;
+    let fuegos = document.querySelectorAll('.fuego');
+    cancle.onclick = function () {
+        body.className = 'dark';
+        this.className = 'text hidden';
+        setTimeout(() => {
+            fuegos.forEach(item => {
+                item.className = 'fuego extinct';
+            })
+            body.className = '';
+        },7000)
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+body {
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      background-color: #b0d5df;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    body.dark {
+      position: relative;
+      transition: all .3s;
+    }
+
+    body.dark::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 100;
+    }
+
+    .birthday-cake {
+      position: relative;
+      top: 50px;
+      left: 0;
+    }
+
+    .birthday-cake:before {
+      content: "";
+      position: absolute;
+      background-color: #ede0d4;
+      width: 400px;
+      height: 140px;
+      border-radius: 50%;
+      left: 50%;
+      bottom: -140px;
+      transform: translateX(-50%);
+      box-shadow: inset -2px -5px #e6ccb2;
+    }
+
+    .cake {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: #fff;
+      width: 350px;
+      height: 130px;
+      transform: translate(-50%, -50%);
+    }
+
+    .cake:before,
+    .cake:after {
+      content: "";
+      position: absolute;
+    }
+
+    .cake:before,
+    .middle,
+    .middle:before {
+      border-radius: 50% 50% 50% 50% / 0% 0% 100% 100%;
+      width: 350px;
+      height: 50px;
+    }
+
+    .cake:before {
+      background-color: #fff;
+      top: 130px;
+    }
+
+    .cake:after {
+      background-color: #7f5539;
+      width: 350px;
+      height: 30px;
+      top: 50px;
+    }
+
+    .middle {
+      position: absolute;
+      background-color: #7f5539;
+      top: 80px;
+      z-index: 1;
+    }
+
+    .middle:before {
+      content: "";
+      position: absolute;
+      background-color: #fff;
+      top: -35px;
+    }
+
+    .top {
+      position: absolute;
+      background-color: #eea08c;
+      width: 350px;
+      height: 90px;
+      border-radius: 50%;
+      z-index: 2;
+      top: -45px;
+      box-shadow: inset -5px -1px #fff, inset -70px 2px rgba(255, 255, 255, .1);
+    }
+
+    .chocs {
+      position: absolute;
+      width: 55px;
+      height: 50px;
+      background-color: #eea08c;
+      top: 0;
+      z-index: 1;
+      border-radius: 50% 50% 50% 50% / 0% 0% 100% 100%;
+      box-shadow: 49px 20px #eea08c, 98px 25px #eea08c, 147px 30px #eea08c, 196px 25px #eea08c, 245px 20px #eea08c, 295px 0 #eea08c, 0px 4px #fff, 49px 24px #fff, 98px 29px #fff, 147px 34px #fff, 196px 29px #fff, 245px 24px #fff, 295px 4px #fff;
+    }
+
+
+    .velas {
+      background: #ffffff;
+      position: absolute;
+      top: -130px;
+      left: 50%;
+      margin-left: -5px;
+      width: 10px;
+      height: 70px;
+      z-index: 99;
+    }
+
+
+    .velas:after,
+    .velas:before {
+      background: rgba(255, 0, 0, 0.4);
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+    }
+
+    .velas:after {
+      top: 15%;
+      left: 0;
+    }
+
+    .velas:before {
+      top: 25%;
+      left: 0;
+    }
+    .candlewick {
+      position: absolute;
+      background-color: #333;
+      width: 1px;
+      height: 10px;
+      left: 4px;
+      top: -10px;
+      z-index: -1;
+    }
+    .candlewick::after{
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 7px;
+      background-color: #fff;
+      border-radius: 50%;
+      top: 7px;
+      left: -4px;
+      box-shadow: 0 70px #fff, inset 2px -1px #fff;
+    }
+
+    .fuego {
+      border-radius: 100%;
+      box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      margin-left: -3px;
+      width: 6px;
+      height: 12.5px;
+    }
+
+    .fuego:nth-child(1) {
+      animation: fuego 2s infinite;
+    }
+
+    .fuego:nth-child(2) {
+      animation: fuego 1.5s infinite;
+    }
+
+    .fuego:nth-child(3) {
+      animation: fuego 1s infinite;
+    }
+
+    .fuego:nth-child(4) {
+      animation: fuego 0.5s infinite;
+    }
+
+    .fuego:nth-child(5) {
+      animation: fuego 0.2s infinite;
+    }
+    .fuego.extinct{
+      opacity: 0;
+      transition: all .3s;
+    }
+
+    @keyframes fuego {
+      0% {
+        background: rgba(254, 248, 97, 0.5);
+        transform: translateY(0) scale(1);
+      }
+
+      50% {
+        background: rgba(255, 50, 0, 0.1);
+        transform: translateY(-20px) scale(0);
+      }
+
+      100% {
+        background: rgba(254, 248, 97, 0.5);
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .text {
+      position: fixed;
+      color: #fff;
+      width: 35px;
+      right: 40px;
+      bottom: 20px;
+      cursor: pointer;
+      font-size: 20px;
+      text-shadow:
+          4px 4px 0px rgba(0, 0, 0, .15),
+          1px 1px 0 rgba(255, 200, 200, 255),
+          2px 2px 0 rgba(255, 150, 150, 255),
+          3px 3px 0 rgba(255, 125, 125, 255);
+    }
+    .text.hidden{
+      display: none;
+    }
+
